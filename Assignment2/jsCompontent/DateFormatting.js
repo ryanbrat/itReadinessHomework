@@ -101,6 +101,9 @@ getLongDate: function(date){
 var d = new Date();
 var formDate = DateFormatter.getLongDate(d);
 document.getElementById("longDate").innerHTML = formDate;
+
+
+//changes
 //month/day/year hour:minutes AM|PM
 // Sample code
 

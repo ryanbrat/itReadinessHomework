@@ -1,0 +1,89 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  background: url("../sky.jpeg") no-repeat center center;
+  background-size: cover;
+  height: 429px;
+  padding: 0;
+  margin: 0;
+}
+
+header h1, header h3, header nav a{
+  color: white;
+}
+
+header h1{
+  padding-top: 150px;
+}
+
+header h1, header h3{
+  text-align: center;
+}
+
+header nav{
+  text-align: right;
+}
+
+header nav a{
+  text-decoration: none;
+  padding: 10px;
+}
+
+.mainContent{
+  float: left;
+  width: 65%;
+  margin: 10px;
+}
+
+aside{
+  width: 25%;
+  float: right;
+  border-bottom: solid 2px black;
+  padding-bottom: 15px;
+  margin: 15px;
+}
+
+aside img{
+  width: 100%;
+}
+
+blockquote div{
+  text-align: right;
+}
+
+blockquote{
+  border: solid 1px black;
+  padding: 20px;
+}
+
+.tags ul{
+  padding-left: 0;
+  display: inline;
+  list-style-type: none;
+}
+
+.tags li{
+  display: inline-block;
+  border: solid 1px black;
+}
+
+footer{
+  clear: both;
+  background-color: #30396D;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  color: white;
+}
+
+footer div{
+  width: 33%;
+  float: left;
+}
+
+footer h5{
+  padding: 10px;
+}

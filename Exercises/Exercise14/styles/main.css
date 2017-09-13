@@ -1,8 +1,55 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-    width:500px;
-    margin:20px auto;
+  background: linear-gradient(#f29492, #114357) no-repeat;
+  background-size: cover;
+}
+
+input {
+  border-radius: 5px;
+}
+
+label {
+  color: white;
+}
+
+.inputs input, #myDropDown {
+  display: block;
+  margin: 16px auto;
+  width: 60%;
+  padding: 5px;
+}
+
+.accept, #message, .control-panel {
+  text-align: center;
+  margin: 16px;
+}
+
+#message{
+  background-color: red;
+  color: white;
+}
+
+.contentBox {
+  background-color: rgba(0, 0, 0, 0.45);
+  max-width: 380px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.invalid{
+  background-color: red;
+  border: 3px solid purple;
+}
+
+.acceptTerms{
+  color: red;
+  background-color: purple;
 }

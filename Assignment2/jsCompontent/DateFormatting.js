@@ -1,14 +1,13 @@
 //getShortTime
 var DateFormatter = {
-getShortTime: function(date){
+  getShortTime: function(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
-    //var formattedHours = '';
     var ampm = '';
 
     if (hours >= 12) {
       ampm = 'pm';
-    }else{
+    } else {
       ampm = 'am'
     }
     if (hours > 12) {
@@ -18,8 +17,12 @@ getShortTime: function(date){
     } else {
       formattedHours = hours;
     }
-    return hours + ':' + minutes + ampm;
-}
+
+    if (minutes.length == 1)
+      minutes = "0" + minutes;
+
+    return hours + ':' + minutes + ' ' + ampm;
+  }
 }
 
 var d = new Date();
@@ -30,16 +33,15 @@ document.getElementById("shortTime").innerHTML = formDate;
 
 //getLongTime
 var DateFormatter = {
-getLongTime: function(date){
+  getLongTime: function(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
-    //var formattedHours = '';
     var ampm = '';
 
     if (hours >= 12) {
       ampm = 'pm';
-    }else{
+    } else {
       ampm = 'am'
     }
     if (hours > 12) {
@@ -49,8 +51,12 @@ getLongTime: function(date){
     } else {
       formattedHours = hours;
     }
-    return hours + ':' + minutes + ':' + seconds + ampm;
-}
+
+    if (minutes.length == 1)
+      minutes = "0" + minutes;
+
+    return hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+  }
 }
 
 var d = new Date();
@@ -59,13 +65,13 @@ document.getElementById("longTime").innerHTML = formDate;
 
 //getShortDate
 var DateFormatter = {
-getShortDate: function(date){
+  getShortDate: function(date) {
     var month = date.getMonth();
     var day = date.getDay();
     var year = date.getFullYear();
 
     return month + '/' + day + '/' + year;
-}
+  }
 }
 
 var d = new Date();
@@ -74,13 +80,26 @@ document.getElementById("shortDate").innerHTML = formDate;
 
 //getLongDate
 var DateFormatter = {
-getLongDate: function(date){
-    var month = date.getMonth();
+  getLongDate: function(date) {
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    var n = month[d.getMonth()];
     var day = date.getDay();
     var year = date.getFullYear();
 
-    return month + '/' + day + '/' + year;
-}
+    return n + ' ' + day + ',' + ' ' + year;
+  }
 }
 
 var d = new Date();
@@ -89,41 +108,140 @@ document.getElementById("longDate").innerHTML = formDate;
 
 //getShortDateTime
 var DateFormatter = {
-getLongDate: function(date){
+  getShortDateTime: function(date) {
     var month = date.getMonth();
     var day = date.getDay();
     var year = date.getFullYear();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = '';
 
-    return month + '/' + day + '/' + year;
-}
+    if (hours >= 12) {
+      ampm = 'pm';
+    } else {
+      ampm = 'am'
+    }
+    if (hours > 12) {
+      hours -= 12;
+    } else if (hours === 0) {
+      formattedHours = 12;
+    } else {
+      formattedHours = hours;
+    }
+
+    if (minutes.length == 1)
+      minutes = "0" + minutes;
+
+    return month + '/' + day + '/' + year + ' ' + hours + ':' + minutes + ' ' + ampm;
+  }
 }
 
 var d = new Date();
-var formDate = DateFormatter.getLongDate(d);
-document.getElementById("longDate").innerHTML = formDate;
+var formDate = DateFormatter.getShortDateTime(d);
+document.getElementById("ShortDateTime").innerHTML = formDate;
+
+//getLongDateTime
+var DateFormatter = {
+  getLongDateTime: function(date) {
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    var n = month[d.getMonth()];
+    var day = date.getDay();
+    var year = date.getFullYear();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = '';
+
+    if (hours >= 12) {
+      ampm = 'pm';
+    } else {
+      ampm = 'am'
+    }
+    if (hours > 12) {
+      hours -= 12;
+    } else if (hours === 0) {
+      formattedHours = 12;
+    } else {
+      formattedHours = hours;
+    }
+
+    if (minutes.length == 1)
+      minutes = "0" + minutes;
+
+    return n + ' ' + day + ',' + ' ' + year + ' ' + hours + ':' + minutes + ' ' + ampm;
+
+  }
+}
+
+var d = new Date();
+var formDate = DateFormatter.getLongDateTime(d);
+document.getElementById("LongDateTime").innerHTML = formDate;
+
+//getExtendedDateTime
+var DateFormatter = {
+  getExtendedDateTime: function(date) {
 
 
-//changes
-//month/day/year hour:minutes AM|PM
-// Sample code
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    var w = weekday[d.getDay()];
+    var month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+    var m = month[d.getMonth()];
+    var day = date.getDay();
+    var year = date.getFullYear();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = '';
 
-// var DateFormatter = {
-//   getReverseDate:function(date){
-//     var year = date.getFullYear();
-//     var month = date.getMonth();
-//
-//     return year + '/' + month;
-// }
-// }
-// var d = new Date();
-// var formDate = DateFormatter.getReverseDate(d);
-// document.getElementById("date").innerHTML = formDate;
+    if (hours >= 12) {
+      ampm = 'pm';
+    } else {
+      ampm = 'am'
+    }
+    if (hours > 12) {
+      hours -= 12;
+    } else if (hours === 0) {
+      formattedHours = 12;
+    } else {
+      formattedHours = hours;
+    }
+    if (minutes.length == 1)
+      minutes = "0" + minutes;
 
+    return w + ', ' + m + ' ' + day + ',' + ' ' + year + ' ' + hours + ':' + minutes + ' ' + ampm;
+  }
+}
 
-
-
-
-//bottom of DateFormatting.js
-// var getMonthYear = DateFormatter.getMonthYear(new Date());
-// console.log('Get Month Year ' + getMonthYear);
-// var d = new Date(year, month, day, hours, minutes, seconds, milliseconds);
+var d = new Date();
+var formDate = DateFormatter.getExtendedDateTime(d);
+document.getElementById("ExtendedDateTime").innerHTML = formDate;

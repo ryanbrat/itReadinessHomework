@@ -18,9 +18,9 @@ var DateFormatter = {
       formattedHours = hours;
     }
 
-    if (minutes.length == 1)
+    if (minutes < 10) {
       minutes = "0" + minutes;
-
+}
     return hours + ':' + minutes + ' ' + ampm;
   }
 }
@@ -52,8 +52,12 @@ var DateFormatter = {
       formattedHours = hours;
     }
 
-    if (minutes.length == 1)
+    if (minutes < 10) {
       minutes = "0" + minutes;
+}
+if (seconds < 10) {
+  seconds = "0" + seconds;
+}
 
     return hours + ':' + minutes + ':' + seconds + ' ' + ampm;
   }
@@ -129,8 +133,9 @@ var DateFormatter = {
       formattedHours = hours;
     }
 
-    if (minutes.length == 1)
+    if (minutes < 10) {
       minutes = "0" + minutes;
+}
 
     return month + '/' + day + '/' + year + ' ' + hours + ':' + minutes + ' ' + ampm;
   }
@@ -176,8 +181,9 @@ var DateFormatter = {
       formattedHours = hours;
     }
 
-    if (minutes.length == 1)
+    if (minutes < 10) {
       minutes = "0" + minutes;
+}
 
     return n + ' ' + day + ',' + ' ' + year + ' ' + hours + ':' + minutes + ' ' + ampm;
 
@@ -235,8 +241,9 @@ var DateFormatter = {
     } else {
       formattedHours = hours;
     }
-    if (minutes.length == 1)
+    if (minutes < 10) {
       minutes = "0" + minutes;
+}
 
     return w + ', ' + m + ' ' + day + ',' + ' ' + year + ' ' + hours + ':' + minutes + ' ' + ampm;
   }

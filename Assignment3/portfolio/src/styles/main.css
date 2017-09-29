@@ -1,0 +1,269 @@
+html {
+  /*position: relative;*/
+  /*min-height: 100%;*/
+}
+
+body {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+a{
+  text-decoration: none;
+}
+
+.goodSide a, .radSide a{
+  color: blue;
+}
+
+.goodSide a:hover, .radSide a:hover{
+  text-decoration: underline;
+}
+
+.wrapper {
+  /*might not need?*/
+}
+
+
+/*HEADER AND CLICK*/
+
+.left h1, .right h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: normal;
+  position: absolute;
+  top: 0;
+  background: rgba(4, 49, 79, 0.8);
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Asap Condensed', sans-serif;
+}
+
+.left h1:hover, .right h1:hover {
+  background: rgba(4, 49, 79, 0.9);
+  color: #aaa;
+}
+
+.left img, .right img {
+  width: 100%;
+}
+
+
+/*HIDDEN TEXT*/
+
+.goodSide {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.radSide {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+.goodSide p, .radSide p {
+  width: 60%;
+  margin: 10% auto;
+  line-height: 1.5;
+  color: #333;
+  padding-bottom: 10px;
+}
+
+.goodSide ul, .radSide ul{
+  list-style-type: none;
+  text-align: center;
+}
+
+
+/*LEFT SECTION*/
+
+.left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #aaa;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+  z-index: 1;
+}
+
+.leftAni {
+  left: -50%;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+}
+
+
+/*LEFT BUTTON*/
+
+#leftButton {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 3px 3px 0;
+}
+
+.buttonInvisibleLeft {
+  left: -100px;
+}
+
+.buttonVisibleLeft {
+  left: 0;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+}
+
+
+/*RIGHT SECTTION*/
+
+.right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #aaa;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+  z-index: 1;
+}
+
+.rightAni {
+  right: -50%;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+}
+
+
+/*RIGHT BUTTON*/
+
+#rightButton {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 3px 0 0 3px;
+}
+
+.buttonInvisibleRight {
+  right: -100px;
+}
+
+.buttonVisibleRight {
+  right: 0;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.2s;
+}
+
+
+/*FOOTER*/
+
+footer {
+  position: absolute;
+  background: rgba(4, 49, 79, 0.8);
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+  z-index: 2;
+}
+
+footer .navMenu{
+  float: left;
+}
+
+footer .socialMenu{
+  float: right;
+}
+
+footer nav a {
+  color: #fff;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+footer i {
+  padding-right: 5px;
+}
+
+footer nav a:hover{
+  color: #aaa;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 600px) {
+    body {
+        overflow: auto;
+        height: 100%;
+    }
+
+    .left h1, .right h1{
+      cursor: auto;
+    }
+
+    .left h1:hover, .right h1:hover {
+      background: rgba(4, 49, 79, 0.8);
+    }
+
+    .goodSide, .radSide, .left, .right, .left h1, .right h1{
+      width: 100%;
+      position: static;
+    }
+
+    #rightButton, #leftButton{
+      display: none;
+    }
+
+    footer{
+      padding: 0;
+      position: static;
+    }
+
+    footer nav a {
+      padding-right: 0px;
+      margin-right: 0px;
+    }
+
+    footer .navMenu, footer .socialMenu{
+      float: none;
+    }
+
+    nav a{
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 8px 0 8px 0;
+      border-top: 1px solid black;
+    }
+}

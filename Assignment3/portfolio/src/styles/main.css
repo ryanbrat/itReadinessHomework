@@ -234,11 +234,16 @@ footer nav a:hover{
 
     .left h1:hover, .right h1:hover {
       background: rgba(4, 49, 79, 0.8);
+      color: #fff;
     }
 
     .goodSide, .radSide, .left, .right, .left h1, .right h1{
       width: 100%;
       position: static;
+    }
+
+    .goodSide, .radSide{
+
     }
 
     #rightButton, #leftButton{

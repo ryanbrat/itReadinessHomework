@@ -1,8 +1,3 @@
-html {
-  /*position: relative;*/
-  /*min-height: 100%;*/
-}
-
 body {
   background: #fff;
   padding: 0;
@@ -22,11 +17,6 @@ a{
 .goodSide a:hover, .radSide a:hover{
   text-decoration: underline;
 }
-
-.wrapper {
-  /*might not need?*/
-}
-
 
 /*HEADER AND CLICK*/
 

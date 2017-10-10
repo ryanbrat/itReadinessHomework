@@ -2,8 +2,6 @@ body {
   background: #aaa;
   padding: 0;
   margin: 0;
-  /*position: relative;*/
-  padding-bottom: 20px;
   font-family: 'Roboto', sans-serif;
   max-height: 100vh;
 }
@@ -24,20 +22,17 @@ h1{
 }
 
 /*IMAGE GALLERY*/
+/*USED W3 SCHOOLS MODAL*/
 
-.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+img{
+  display: block;
+  margin: 0 auto;
 }
 
 .column {
+  padding: 10px;
   float: left;
-  width: 20%;
+  margin: 0 auto;
 }
 
 /* The Modal (background) */
@@ -177,11 +172,10 @@ footer nav a:hover{
 
 /*MEDIA QUERIES*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
   .column {
     float: none;
-    width: 80%;
   }
 
     footer{

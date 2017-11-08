@@ -238,7 +238,7 @@ footer nav a:hover{
       position: static;
     }
 
-    #rightButton, #leftButton{
+    #rightButton, #leftButton, .left i, .right i{
       display: none;
     }
 

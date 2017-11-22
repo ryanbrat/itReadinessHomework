@@ -1,0 +1,23 @@
+.item{
+    border:1px solid black;
+    color:rgb(43, 43, 43);
+    background:#e7e7e7;
+    padding:25px;
+    display: inline-block;
+    width: 15%;
+}
+
+@media screen and (max-width: 767px) {
+
+    .item{
+      width: 40%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+  body > .item{
+    width: 90%;
+    display: block;
+  }
+}

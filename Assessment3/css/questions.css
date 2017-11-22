@@ -1,0 +1,42 @@
+/*
+    Q1 - Write a media query for desktop first.  The break point needs to be at 960px;
+*/
+
+body {
+   background: red;
+  }
+
+@media (max-width: 960px) {
+  body {
+    background: green;
+   }
+}
+
+
+
+/*
+    Q2 - Write a media query for mobile first.  The break point needs to be at 720px;
+*/
+
+body {
+   background: red;
+  }
+
+@media (min-width: 720px) {
+  body {
+    background: green;
+   }
+}
+
+
+/*
+    Q3 - What CSS property are you having the most trouble figuring out?
+*/
+
+ /*I thought I knew flexbox but it recently gave me trouble :)*/
+
+/*
+    Q4 - What is the best CSS property and why?
+*/
+
+/*The best css property is background, because it has a big visual impact on a web page*/

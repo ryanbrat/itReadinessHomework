@@ -1,0 +1,137 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  background: #aaa;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 5rem;
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+  color:  rgba(4, 49, 79, 0.8);
+}
+
+a:hover{
+  color:white;
+}
+
+/*HEADER*/
+
+h1{
+  font-family: 'Asap Condensed', sans-serif;
+  text-align: center;
+  padding: 10px;
+  background: rgba(4, 49, 79, 0.8);
+  width: 100%;
+  color: #fff;
+  margin: 0;
+}
+
+h2 {
+  width: 60%;
+  margin: 10% auto;
+  line-height: 1.5;
+  color: #333;
+  padding-bottom: 10px;
+}
+
+p, h3{
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-one img{
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.desktop-view{
+  background-color: white;
+  padding: 1rem;
+}
+
+.mobile-view img{
+  width: 40%;
+}
+
+.challenge-bar{
+  background-color: rgba(4, 49, 79, 0.8);
+  width: 100%;
+  padding: 20px;
+  color: white;
+  margin: 0 auto;
+}
+
+/*FOOTER*/
+
+footer {
+  position: absolute;
+  background: rgba(4, 49, 79, 0.8);
+  width: 100%;
+  bottom: 0;
+  left:0;
+  right:0;
+  padding: 10px;
+
+}
+
+footer .navMenu{
+  float: left;
+}
+
+footer .socialMenu{
+  float: right;
+}
+
+footer nav a {
+  color: #fff;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+footer i {
+  padding-right: 5px;
+}
+
+footer nav a:hover{
+  color: #aaa;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 700px) {
+
+  .column {
+    float: none;
+  }
+
+    footer{
+      padding: 0;
+      margin: 0;
+      position: static;
+    }
+
+    footer nav a {
+      padding-right: 0px;
+      margin-right: 0px;
+    }
+
+    footer .navMenu, footer .socialMenu{
+      float: none;
+    }
+
+    nav a{
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 8px 0 8px 0;
+      border-top: 1px solid black;
+    }
+}

@@ -1,14 +1,21 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
   background: #aaa;
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  max-height: 100vh;
+  margin-bottom: 50px;
 }
 
 a{
   text-decoration: none;
 }
+
+/*GALLERY PAGE*/
 
 /*HEADER*/
 
@@ -25,14 +32,18 @@ h1{
 /*USED W3 SCHOOLS MODAL*/
 
 img{
-  display: block;
-  margin: 0 auto;
+  /*display: block;
+  margin: 0 auto;*/
 }
 
-.column {
-  padding: 10px;
-  float: left;
-  margin: 0 auto;
+.img-container {
+  display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.column{
+  margin:2%;
 }
 
 /* The Modal (background) */
@@ -137,6 +148,9 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
+
+
+
 
 /*FOOTER*/
 

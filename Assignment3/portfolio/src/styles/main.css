@@ -1,3 +1,4 @@
+
 body {
   background: #fff;
   padding: 0;
@@ -69,7 +70,7 @@ ul{
   max-height: 95vh;
 }
 
-.goodSide p, .radSide p {
+.goodSide p, .radSide p, h2 {
   width: 60%;
   margin: 10% auto;
   line-height: 1.5;
